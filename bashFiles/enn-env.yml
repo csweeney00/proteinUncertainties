@@ -24,4 +24,6 @@ dependencies:
   - wheel=0.41.2=py311h06a4308_0
   - xz=5.4.6=h5eee18b_1
   - zlib=1.2.13=h5eee18b_1
+  - pip:
+     - git+https://github.com/deepmind/enn.git
 prefix: /opt/conda/envs/enn-env
