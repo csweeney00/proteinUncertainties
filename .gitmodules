@@ -1,0 +1,3 @@
+[submodule "enn"]
+	path = enn
+	url = https://github.com/csweeney00/enn
