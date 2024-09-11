@@ -60,7 +60,7 @@ if __name__ == "__main__":
         og_num_models = args.num_models     # Just train one model for the hyperparameter tuning stage
         args.num_models = 1
         lr_options = [0.001, 0.01, 0.05, 0.1, 0.5]
-        num_epochs_options = [400, 500, 600, 700, 800, 900]
+        num_epochs_options = [200, 300, 400, 500, 600, 700, 800, 900]
 
         if args.early_stopping:
             hyper_params = {'lr':lr_options}
