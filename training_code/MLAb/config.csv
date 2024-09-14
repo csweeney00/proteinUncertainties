@@ -1,0 +1,9 @@
+run_id,state,resolution_cutoff,number_of_layers,lr,lr_min,weight_decay,batch,all_atom_fape_loss,bond_ideality_loss,dropout,IPA_attention_heads,IPA_attention_head_dim,IPA_query_points,IPA_value_points,fape_clamp,rel_pos_dim,embed_dim,optimizer,n_seq_blocks,edge_update,error_estimation,adamend,loss_every_layer,loss_type,rotation_propagation,clash_loss
+train_data_ens_1_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_2_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_3_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_4_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_5_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_quick_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_quick_2_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
+train_data_ens_mean_len_11,unstarted,3.5,8.0,0.001,0.0001,0.001,32.0,1.0,1.0,0.1,12.0,16.0,4.0,8.0,0,16.0,32.0,radam,0,0,0,0,1,AF2,0,1.0
