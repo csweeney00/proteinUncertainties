@@ -4,13 +4,11 @@ import pandas as pd
 from os import listdir
 from os.path import isfile, join
 
-
 def build_loops_dataset():
     onlyfiles = [f for f in listdir('./pdbs') if isfile(join('./pdbs', f))]
     codes = set([f.split("_")[0] for f in onlyfiles])
 
-    # Limiting codes to sequences of length 5 as this the most populous sequence length
-    # 5 is far too big. Length 11 has a manageable number of conformations for us to handle (arount 18000)
+    # Limiting codes to sequences of length 11
     codes = [code for code in codes if len(code) == 11]
 
     data = []
