@@ -80,7 +80,7 @@ def split_dataset(num_splits, bs):
 
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser(description='Generate Loops Dataset')
-    argparser.add_argument('--dataframe_file_head', type=str,
+    argparser.add_argument('--dataframe_file_head', type=str, default = './loopsDatasets/bs_loops_',
                          help='the filepath from current directory to the stored loop dataframe to convert')
     argparser.add_argument('--file_num', type=int, default=0,
                          help='the index of the loop dataframe')
