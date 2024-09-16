@@ -69,6 +69,15 @@ def generate_coordinate_dataset(df, parser, pdb_list):
         coord_df.loc[i] = coords_row.iloc[0]
     return coord_df
 
+# splits up the dataset into smaller more manageable chunks so that the processing can be easily parallelised
+def split_dataset(num_splits, bs):
+    df_size = len(bs) // num_splits
+    for i in range(num_splits-1):
+        df = bs.iloc[i*df_size: (i+1)*df_size]
+        df.to_pickle('./loopsDatasets/bs_loops_' + str(i) + '.pkl')
+    df = bs.iloc[(num_splits-1)*df_size:]
+    df.to_pickle('./loopsDatasets/bs_loops_' + str(num_splits-1) + '.pkl')
+
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser(description='Generate Loops Dataset')
     argparser.add_argument('--dataframe_file_head', type=str,
@@ -77,8 +86,12 @@ if __name__ == "__main__":
                          help='the index of the loop dataframe')
     argparser.add_argument('--dry_run', type=bool, default=False,
                          help='do a single pass through the program')
+    argparser.add_argument('--n_splits', type=int)
     args = argparser.parse_args()
 
+    beta_sheet_loops = pkl.load(open('./20231211_bsheet_loops_w2ndstruc_conformations.pkl', 'rb'))
+    split_dataset(args.n_splits, beta_sheet_loops)
+    
     df = pd.read_pickle(args.dataframe_file_head + str(args.file_num) + '.pkl')
     if args.dry_run == True:
         df = df.iloc[:2]
